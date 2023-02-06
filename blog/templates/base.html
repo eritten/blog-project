@@ -1,0 +1,21 @@
+{% load tag %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<form action="{% url 'search' %}" method="GET">
+<label>Search for post
+<input type="search" name="search" placeholder="Search" required/>
+</label>
+<br/>
+<input type="submit" value="Search"/>
+</form>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>
