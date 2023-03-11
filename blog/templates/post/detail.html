@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load tag %}
 {% load comment_tags %}
+{% load embed_video_tags %}
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
@@ -24,6 +25,9 @@
         </p>
       </div>
     </div>
+{% video post.video_url 'large' %}
+
+
   </section>
   <!-- recommendation and comment -->
   <section class="recom-and-comment">

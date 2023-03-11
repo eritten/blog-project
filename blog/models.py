@@ -18,6 +18,7 @@ class Blog(models.Model):
     text = text = MarkdownField(rendered_field='text_rendered', validator=VALIDATOR_STANDARD)
     text_rendered = RenderedMarkdownField()
     video_url = EmbedVideoField()
+    image = models.ImageField(upload_to="images")
     author = models.CharField(max_length=200)
     comments = GenericRelation(Comment)
     tags = TaggableManager()

@@ -127,6 +127,8 @@ blog homepage
                     <img src="{{post.image.url}}" alt="">
                   </div>
                   <div class="text-box">
+                    <p class="blog-title">{{ post.title }}</p>
+                    <p class="comment-text">{{ post.text|truncatewords:70  }}</p>
                     <p class="blog-title">{{ post.title |truncatewords:10}}</p>
                     <p class="comment-text">{{ post.text |truncatewords:15}}</p>
                   </div>
