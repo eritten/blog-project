@@ -129,7 +129,7 @@ blog homepage
                   </div>
                   <div class="text-box">
                     <p class="blog-title">{{ post.title }}</p>
-                    <p class="comment-text">{{ post.text }}</p>
+                    <p class="comment-text">{{ post.text|truncatewords:70  }}</p>
                   </div>
                 </a>
                 <p class="time-uploaded">posted {{post.created_at|ago}}</p>
