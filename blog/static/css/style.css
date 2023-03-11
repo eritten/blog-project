@@ -421,7 +421,7 @@ header .header-wrapper h1 {
 }
 .latest-post-wrapper li .img-box {
     width: 45%;
-    height: 15rem;
+    height: 20rem;
     border-radius: 6px;
     overflow: hidden;
     flex: 2;
@@ -430,7 +430,6 @@ header .header-wrapper h1 {
     width: 100%;
     height: 100%;
     transition: .4s;
-    object-fit: cover;
 }
 .latest-post-wrapper .text-wrapper {
     display: flex;
@@ -536,7 +535,6 @@ header .header-wrapper h1 {
 .most-commented-wrapper a .img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transition: .4s;
 }
 .most-commented-wrapper .text-box {
@@ -923,7 +921,28 @@ header .header-wrapper h1 {
     }
 }
 /* end of search results styles (results.html) */
-
+/* privacy and terms */
+.privacy .title,
+.terms .title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--mainColor);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+.privacy .sub-title,
+.terms .sub-title {
+    color: var(--mainColor);
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+.privacy p,
+.terms p {
+    margin-bottom: 1rem;
+}
+/* end of privacy and terms */
 /* footer */
 footer {
     background: var(--mainColor);

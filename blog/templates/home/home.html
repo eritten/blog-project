@@ -65,12 +65,11 @@ blog homepage
 <section class="about" id="about">
   <div class="section-wrapper" style="font-size: 1.8rem;">
     <h2 class="display-4 text-center mb-5">ABOUT US</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident temporibus quos nemo doloribus nobis impedit, maiores, dignissimos atque optio expedita maxime dolores, inventore explicabo repudiandae quas repellat libero exercitationem suscipit!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur provident mollitia vel, enim animi similique autem explicabo saepe beatae temporibus? Officia quaerat qui quis nemo sunt pariatur magni eum! Quae.
-    Nemo facilis voluptatum beatae veniam ratione, maxime sapiente error iure. Nulla, a id! Minima totam unde, laboriosam maxime optio, non sunt reprehenderit, saepe blanditiis sit minus enim! Commodi, magni libero.
-    Eveniet consequatur esse rerum quaerat, rem dolorem sequi, fugiat odit, numquam unde consectetur neque id beatae? Ducimus vero, cumque sunt excepturi omnis, quos dolorem quia debitis obcaecati eos, laudantium minima!
-    Incidunt veritatis aliquam quo ea assumenda sapiente odit nulla sunt perspiciatis fugit alias minus corrupti iste sed saepe quisquam, repudiandae eveniet deleniti eaque. Nesciunt illum veniam nobis ipsam magnam? Natus!
-    Laboriosam sapiente itaque corrupti? Debitis, repellat! Quod eius deleniti architecto fugiat tempore eum magnam, est possimus omnis tempora sint quisquam! Quisquam commodi nam natus soluta itaque officia dolorum sapiente animi.</p>
+    <p>Welcome to Odinaba, the ultimate destination for entertainment enthusiasts! Our website is dedicated to providing you with the latest and greatest news, reviews, and insights about all things entertainment.</p>
+    <p>At Odinaba, we believe that everyone deserves a break from the stresses of everyday life. That's why we've created a platform that is both fun and informative, allowing you to indulge in your passions and discover new ones.</p>
+    <p>Our team of writers and editors are passionate about entertainment, and they work tirelessly to bring you the most up-to-date and interesting content possible. From movies and TV shows to music and gaming, we cover it all. We also feature exclusive interviews with celebrities, directors, and other industry insiders to give you a behind-the-scenes look at your favorite entertainment.</p>
+    <p>But we don't just stop at news and reviews. We also offer a variety of features and interactive elements, such as quizzes, polls, and debates, to keep you engaged and entertained. Whether you're looking to test your knowledge, share your opinions, or just have some fun, Odinaba has something for everyone.</p>
+    <p>So why wait? Join our community of entertainment lovers today and start exploring all that Odinaba has to offer. We're confident that you'll find something to love, and we look forward to sharing our passion for entertainment with you!</p>
   </div>
 </section>
 <!-- end of about section -->
@@ -103,7 +102,7 @@ blog homepage
             <div class="img-box">
               <img src="{% static 'img/logo.jpg' %}" alt="logo">
             </div>
-            <p>Hello precious one, we are content writers who are into blogging, commercials and anything Entertainment. We help clients bring contend to the right people.</p>
+            <p>Attention entertainment lovers! Looking for a website that's packed with exciting content? Look no further than Odinaba! Our website is your ultimate destination for all things entertainment - from the latest music and movies to the hottest TV shows and celebrity news.</p>
             <div class="icons-box">
               <a href="#n" aria-label="youtube">
                 <i class="fab fa-youtube"></i>
@@ -127,10 +126,8 @@ blog homepage
                     <img src="{{post.image.url}}" alt="">
                   </div>
                   <div class="text-box">
-                    <p class="blog-title">{{ post.title }}</p>
-                    <p class="comment-text">{{ post.text|truncatewords:70  }}</p>
                     <p class="blog-title">{{ post.title |truncatewords:10}}</p>
-                    <p class="comment-text">{{ post.text |truncatewords:15}}</p>
+                    <p class="comment-text">{{ post.text|truncatewords:15  }}</p>
                   </div>
                 </a>
                 <p class="time-uploaded">posted {{post.created_at|ago}}</p>

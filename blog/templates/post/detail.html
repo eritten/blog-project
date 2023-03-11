@@ -23,9 +23,11 @@
         <p class="main-post-detail">
           {{ post.text|markdown }}
         </p>
+        <div class="video-box">
+          {% video post.video_url "small" %}
+           </div>
       </div>
     </div>
-{% video post.video_url 'large' %}
 
 
   </section>

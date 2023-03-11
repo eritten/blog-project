@@ -1,7 +1,7 @@
 <ul class="latest-post-wrapper">
   {% for post in latest_posts %}
     <li class="shadow">
-      <a href="{{ post.get_absolute_url }}">
+      <a href="{{ post.get_absolute_url }}" data-aos="fade-up">
         <div class="img-box">
           <img src="{{post.image.url}}" alt="">
         </div>
