@@ -1,7 +1,8 @@
 :root {
-    --darkGrey: rgb(58, 57, 56);
+    --mainColor: rgb(58, 57, 56);
     --white: #fff;
     --black: #222;
+    --mainColor: #a91b0d;
     --max-width: 1300px;
     --box-shadow-out:.4rem .4rem 1rem #6666664d,
                 -.4rem -.4rem 1rem #6666664d;
@@ -22,7 +23,7 @@ html {
     background: var(--white);
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--darkGrey);
+    background: var(--mainColor);
     border-radius: 100vw;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -82,7 +83,7 @@ form .input-div {
     text-align: center;
     text-transform: capitalize;
     font-size: 3rem;
-    color: var(--darkGrey);
+    color: var(--mainColor);
 }
 /* end of reusable styles */
 body {
@@ -131,7 +132,7 @@ nav .nav-wrapper .nav-list a {
 nav .nav-wrapper .nav-list a.active, 
 nav .nav-wrapper .nav-list a:hover, 
 nav .nav-wrapper .nav-list a:focus {
-    background-color: var(--darkGrey);
+    background-color: var(--mainColor);
     color: var(--white)!important;
 }
 .nav-list .mobile-menu-close-btn {
@@ -146,7 +147,7 @@ nav .icons-box button {
     height: 4rem;
     width: 4rem;
     font-size: 2.5rem;
-    background-color: var(--darkGrey);
+    background-color: var(--mainColor);
     color: var(--white);
     transition: .4s;
     border-radius: 50%;
@@ -203,7 +204,7 @@ nav form .input-div .search-submit {
         flex-direction: column;   
         align-items: center;
         justify-content: center;
-        background: var(--darkGrey);
+        background: var(--mainColor);
         transition: .4s;
         transform: translateX(105%);
     }
@@ -222,7 +223,7 @@ nav form .input-div .search-submit {
     nav .nav-wrapper .nav-list a:hover, 
     nav .nav-wrapper .nav-list a:focus {
         background-color: var(--white);
-        color: var(--darkGrey)!important;
+        color: var(--mainColor)!important;
     }
     nav .icons-box .menu-btn {
         display: inline-block;
@@ -305,9 +306,12 @@ header .header-wrapper h1 {
     left: 0;
     width: 100%;
     padding: 1rem;
-    background: var(--darkGrey);
+    background: var(--mainColor);
     color: var(--white)!important;
     transition: .4s;
+}
+.main-img-container .img-box .text-box p {
+    white-space: nowrap;
 }
 @media (max-width: 768px) {
     .main-img-container {
@@ -379,7 +383,7 @@ header .header-wrapper h1 {
     left: 0;
     width: 100%;
     padding: 1rem;
-    background: var(--darkGrey);
+    background: var(--mainColor);
     color: var(--white)!important;
     transition: .4s;
 }
@@ -390,11 +394,14 @@ header .header-wrapper h1 {
 }
 /* end of images display */
 /* latest post */
+.blog-recent {
+    padding: 1rem;
+}
 .latest-post-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
+    grid-template-columns: none;
+    gap: 0;
     padding-left: 0!important;
 }
 
@@ -453,8 +460,11 @@ header .header-wrapper h1 {
 }
 @media (max-width: 480px) {
     .latest-post-wrapper {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-columns: none;
         gap: 1rem;
+    }
+    .header-wrapper p {
+        font-size: 3rem!important;
     }
 }
 /* end of latest post */
@@ -472,14 +482,14 @@ header .header-wrapper h1 {
 }
 .blogger-info-box .img-box {
     width: 15rem;
-    height: 10rem;
+    height: 5rem;
     margin: 0 auto;
     margin-bottom: 1.5rem;
 }
 .blogger-info-box .img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 .blogger-info-box .icons-box {
     width: 100%;
@@ -536,7 +546,7 @@ header .header-wrapper h1 {
     text-transform: capitalize;
     font-weight: bold;
     font-size: 2rem;
-    color: var(--darkGrey)!important;
+    color: var(--mainColor)!important;
 }
 .tags .tags-wrapper {
     display: flex;
@@ -552,7 +562,7 @@ header .header-wrapper h1 {
 }
 .tags .tags-wrapper a {
     padding: 0.5rem 1rem;
-    background-color: var(--darkGrey);
+    background-color: var(--mainColor);
     color: var(--white)!important;
     border-radius: 10px;
     font-size: 1.8rem;
@@ -562,7 +572,7 @@ header .header-wrapper h1 {
 .tags .tags-wrapper a:hover,
 .tags .tags-wrapper a:focus {
     background-color: var(--white);
-    color: var(--darkGrey)!important;
+    color: var(--mainColor)!important;
 }
 @media (max-width: 768px) {
     .most-commented-wrapper a {
@@ -597,7 +607,7 @@ header .header-wrapper h1 {
 .contact-wrapper .img-box img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .contact-wrapper .contact-form-container {
     height: 40rem;
@@ -622,7 +632,7 @@ header .header-wrapper h1 {
     height: 15rem;
 }
 .contact-form-container form input[type="submit"] {
-    background-color: var(--darkGrey);
+    background-color: var(--mainColor);
     color: var(--white)!important;
     font-size: 2rem;
     max-width: 50%;
@@ -636,7 +646,7 @@ header .header-wrapper h1 {
 .contact-form-container form input[type="submit"]:hover,
 .contact-form-container form input[type="submit"]:focus {
     background-color: var(--white);
-    color: var(--darkGrey)!important;
+    color: var(--mainColor)!important;
 }
 @media (max-width: 768px) {
     .contact-wrapper .img-box {
@@ -706,14 +716,14 @@ header .header-wrapper h1 {
     margin: 0 auto!important;
 }
 #comments strong {
-    border-bottom: 3px solid var(--darkGrey)!important;
+    border-bottom: 3px solid var(--mainColor)!important;
     font-size: 1.8rem;
 }
 #comments form .row {
     flex-direction: column!important;
 }
 #buttonPlaceholder button {
-    background-color: var(--darkGrey)!important;
+    background-color: var(--mainColor)!important;
     color: var(--white)!important;
     border: none!important;
     outline: none!important;
@@ -727,7 +737,7 @@ header .header-wrapper h1 {
 #buttonPlaceholder button:hover,
 #buttonPlaceholder button:focus {
     background-color: var(--white)!important;
-    color: var(--darkGrey)!important;
+    color: var(--mainColor)!important;
 }
 #id_content {
     height: 10rem;
@@ -753,7 +763,7 @@ header .header-wrapper h1 {
     cursor: pointer;
 }
 .comments-wrapper .add-comment-icon {
-    color: var(--darkGrey);
+    color: var(--mainColor);
 }
 .comments-wrapper form {
     padding: 1rem;
@@ -774,7 +784,7 @@ header .header-wrapper h1 {
     box-shadow: var(--box-shadow);
 }
 .comments-wrapper form input[type="submit"] {
-    background-color: var(--darkGrey);
+    background-color: var(--mainColor);
     color: var(--white)!important;
     font-size: 2rem;
     max-width: 50%;
@@ -788,7 +798,7 @@ header .header-wrapper h1 {
 .comments-wrapper form input[type="submit"]:hover,
 .comments-wrapper form input[type="submit"]:focus {
     background-color: var(--white);
-    color: var(--darkGrey)!important;
+    color: var(--mainColor)!important;
 }
 .comment-added-msg {
     font-size: 2.5rem;
@@ -822,7 +832,7 @@ header .header-wrapper h1 {
 }
 .recom-wrapper .similar-link .similar-title {
     font-size: 2rem;
-    color: var(--darkGrey)!important;
+    color: var(--mainColor)!important;
     flex: 3;
     font-weight: bold;
 }
@@ -881,7 +891,7 @@ header .header-wrapper h1 {
 /* end of categories (tags) styles */
 /* search results styles (results.html) */
 .search-results .post-wrapper a {
-    color: var(--darkGrey)!important;
+    color: var(--mainColor)!important;
     transition: .5s;
 }
 .search-results .post-wrapper a:hover,
@@ -916,7 +926,7 @@ header .header-wrapper h1 {
 
 /* footer */
 footer {
-    background: var(--darkGrey);
+    background: var(--mainColor);
     color: var(--white)!important;
     font-size: 1.8rem;
     padding: 2rem;
@@ -969,7 +979,7 @@ footer .social-icons-box a {
     width: 4rem;
     height: 4rem;
     background-color: var(--white);
-    color: var(--darkGrey)!important;
+    color: var(--mainColor)!important;
     transition: .4s;
     border-radius: 50%;
     display: flex;
@@ -980,7 +990,7 @@ footer .social-icons-box a {
 }
 footer .social-icons-box a:hover,
 footer .social-icons-box a:focus {
-    background-color: var(--darkGrey);
+    background-color: var(--mainColor);
     color: var(--white)!important;
 }
 footer .footer-copyright-info {

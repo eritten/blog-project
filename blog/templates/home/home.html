@@ -11,7 +11,7 @@ blog homepage
    <header>
     <div class="header-wrapper">
       <div class="content-wrapper" data-aos="fade-left">
-        <p style="font-size: 3rem; font-family: Arial, Helvetica, sans-serif;">BB Page is a blogging site that delivers latest news and the talk of the town.</p>
+        <p style="font-size: 5rem; font-family: Arial, Helvetica, sans-serif;">Odinaba is a blogging site that delivers latest news and the talk of the town.</p>
         <a href="#about" style="color: #fff!important; font-size: 2rem;" class="btn btn-dark">Read more</a>
       </div>
     </div>
@@ -23,7 +23,7 @@ blog homepage
     <div class="img-box">
       <img src="{% static 'img/pics/pic1.jpg' %}" alt="image display">
       <div class="text-box">
-        <p>Love African</p>
+        <p>Entertainment news</p>
       </div>
     </div>
     <!-- end -->
@@ -31,7 +31,7 @@ blog homepage
     <div class="img-box">
       <img src="{% static 'img/pics/pic2.jpg' %}" alt="image display">
       <div class="text-box">
-        <p>Love African</p>
+        <p>Trending news</p>
       </div>
     </div>
     <!-- end -->
@@ -39,7 +39,7 @@ blog homepage
     <div class="img-box">
       <img src="{% static 'img/pics/pic3.jpg' %}" alt="image display">
       <div class="text-box">
-        <p>Love African</p>
+        <p>Business news</p>
       </div>
     </div>
     <!-- end -->
@@ -47,7 +47,7 @@ blog homepage
     <div class="img-box">
       <img src="{% static 'img/pics/pic4.jpg' %}" alt="image display">
       <div class="text-box">
-        <p>Love African</p>
+        <p>Life news</p>
       </div>
     </div>
     <!-- end -->
@@ -55,7 +55,7 @@ blog homepage
     <div class="img-box">
       <img src="{% static 'img/pics/pic5.jpg' %}" alt="image display">
       <div class="text-box">
-        <p>Love African</p>
+        <p>sports news</p>
       </div>
     </div>
     <!-- end -->
@@ -98,10 +98,10 @@ blog homepage
             </div>
           </div>
           <!-- end of tags -->
-          <!-- bb page's logo and info display -->
+          <!-- Dinaba's logo and info display -->
           <div class="blogger-info-box" data-aos="fade-up" data-aos-delay="200">
             <div class="img-box">
-              <img src="{% static 'img/logo2.jpg' %}" alt="logo of bb page">
+              <img src="{% static 'img/logo.jpg' %}" alt="logo">
             </div>
             <p>Hello precious one, we are content writers who are into blogging, commercials and anything Entertainment. We help clients bring contend to the right people.</p>
             <div class="icons-box">
@@ -116,20 +116,19 @@ blog homepage
               </a>
             </div>
           </div>
-          <!-- end of bb page's logo and info display -->
+          <!-- end of Odinaba's logo and info display -->
           <h3>Most commented posts</h3>
           {% get_most_commented_posts as most_commented_posts %}
           <ul class="most-commented-wrapper">
             {% for post in most_commented_posts %}
               <li class="bg-light" data-aos="fade-up" data-aos-delay="300">
-
                 <a href="{{ post.get_absolute_url }}">
                   <div class="img-box">
                     <img src="{{post.image.url}}" alt="">
                   </div>
                   <div class="text-box">
-                    <p class="blog-title">{{ post.title }}</p>
-                    <p class="comment-text">{{ post.text }}</p>
+                    <p class="blog-title">{{ post.title |truncatewords:10}}</p>
+                    <p class="comment-text">{{ post.text |truncatewords:15}}</p>
                   </div>
                 </a>
                 <p class="time-uploaded">posted {{post.created_at|ago}}</p>
@@ -150,7 +149,7 @@ blog homepage
   <div class="section-wrapper">
     <div class="contact-wrapper">
       <div class="img-box" data-aos="fade-right">
-        <img src="{% static 'img/logo1.jpg' %}" alt="bb page drawing image">
+        <img src="{% static 'img/contact.jpg' %}" alt=" image">
       </div>
       <div class="contact-form-container" data-aos="fade-left">
         <form action="{% url 'home' %}" class="bg-light" method="POST">
@@ -177,6 +176,7 @@ blog homepage
   min-width: 60%;
   transform: translateX(-50%);
   background-color: #fff;
+  color: black;
   z-index: 20000000;
 border-radius: 6px;
 }

@@ -1,7 +1,15 @@
-<ul>
+<ul class="latest-post-wrapper">
   {% for post in latest_posts %}
-    <li>
-      <a href="{{ post.get_absolute_url }}">{{ post.title }} by {{post.author}} Published {{post.created_at}} </a>
+    <li class="shadow">
+      <a href="{{ post.get_absolute_url }}">
+        <div class="img-box">
+          <img src="{{post.image.url}}" alt="">
+        </div>
+        <div class="text-wrapper">
+          <p class="latest-post-title">{{ post.title |truncatewords:15}}</p>
+          <p class="post-text" id="post-text">{{ post.text |truncatewords:35}}</p>
+        </div>
+      </a>
     </li>
   {% endfor %}
 </ul>
